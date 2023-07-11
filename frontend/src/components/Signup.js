@@ -13,7 +13,7 @@ const Signup = () => {
         }
     });
     const collectData = async () => {
-        let result = await fetch('http://localhost:5000/register', {
+        let result = await fetch('https://e-comserver1.onrender.com/register', {
             method: 'post',
             body: JSON.stringify({ name, email, password }),
             headers: {
