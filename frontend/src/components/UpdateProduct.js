@@ -13,7 +13,7 @@ const UpdateProduct = () => {
         getproductDetail();
     },[]);
     const getproductDetail=async ()=>{
-        let result = await fetch('http://localhost:5000/delete-product/'+params.id);
+        let result = await fetch('https://e-comserver1.onrender.com/delete-product/'+params.id);
         result = await result.json();
         setName(result.name);
         setPrice(result.price);
