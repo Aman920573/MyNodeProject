@@ -9,13 +9,13 @@ const Productlist = () => {
         selectProduct();
     }, []);
     const selectProduct = async () => {
-        let result = await fetch('http://localhost:5000/products');
+        let result = await fetch('https://e-comserver1.onrender.com/products');
         result = await result.json();
         setProducts(result);
     }
     console.warn(products);
     const delProduct=async (id)=>{
-        let result = await fetch('http://localhost:5000/delete-product/'+id,{
+        let result = await fetch('https://e-comserver1.onrender.com/delete-product/'+id,{
             method:"Delete"
         })
         result = await result.json();
